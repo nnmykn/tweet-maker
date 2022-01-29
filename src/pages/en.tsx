@@ -20,6 +20,7 @@ const Page = () => {
             <Head>
                 <link rel="canonical" href="https://tweet.go5.run/en/"/>
                 <title key="site:title">#TweetMaker | 🐤Tweet maker that requires no login</title>
+                <meta property="og:image" content={"https://" + "tweet.go5.run" + "/img/ogp.png"}/>
             </Head>
             <main className={styles.main}>
                 <div className={styles.notify}>

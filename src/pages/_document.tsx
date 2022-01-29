@@ -38,7 +38,6 @@ class MyDocument extends Document<{stylesheets: Sheet[]}> {
         <meta property="og:title" content={name}/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content={"https://" + domain + "/"}/>
-        <meta property="og:image" content={"https://" + domain + "/img/ogp.png"}/>
         <meta property="og:site_name" content={name}/>
         <meta property="og:description" content={description}/>
         <meta name="twitter:card" content="summary_large_image"/>

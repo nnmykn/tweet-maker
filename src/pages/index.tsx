@@ -24,6 +24,7 @@ const Page = () => {
             <Head>
                 <link rel="canonical" href="https://tweet.go5.run/"/>
                 <title key="site:title">#TweetMaker(ツイートメーカー) | 🐤ログイン不要でハッシュタグツイートをできます。</title>
+                <meta property="og:image" content={"https://" + "tweet.go5.run" + "/img/ogp.png"}/>
             </Head>
             <main className={styles.main}>
                 <Link href="/create"><a>

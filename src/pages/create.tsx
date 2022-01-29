@@ -19,6 +19,7 @@ const Page = () => {
             <Head>
                 <link rel="canonical" href="https://tweet.go5.run/create"/>
                 <title key="site:title">#ツイートを作成 | #TweetMaker</title>
+                <meta property="og:image" content={"https://" + "tweet.go5.run" + "/img/ogp.png"}/>
             </Head>
             <main className={styles.main}>
                 <Link href="mailto:hi@kan.run"><a>
