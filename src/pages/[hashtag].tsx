@@ -25,14 +25,18 @@ const Page = () => {
         window.location.assign(`/${e}`)
     }
     const router = useRouter()
+    
     const { hashtag } = router.query
-    const name: string = hashtag as string
+    if (!router.isReady) {
+        return null
+    }
+    const hash: string = hashtag as string
     return (
         <div>
             <Head>
-                <link rel="canonical" href="https://identicon.go5.run/"/>
+                <link rel="canonical" href={`https://identicon.go5.run/${hash}`}/>
                 <title key="site:title">#{hashtag} | #TweetMaker</title>
-                <meta property="og:image" content={`https://res.cloudinary.com/nixo/image/upload/l_text:Sawarabi%20Gothic_50_bold:%23${hashtag},co_rgb:fff,w_1100,c_fit/v1643418283/tweetmaker-template_viwniv.png`}/>
+                <meta property="og:image" content={`https://res.cloudinary.com/nixo/image/upload/l_text:Sawarabi%20Gothic_50_bold:%23${hash},co_rgb:fff,w_1100,c_fit/v1643418283/tweetmaker-template_viwniv.png`}/>
             </Head>
             <main className={styles.main}>
                 <div className={styles.notify}>
