@@ -36,8 +36,8 @@ const Page = () => {
         <div>
             <Head>
                 <link rel="canonical" href={"https://tweet.go5.run/" + hash}/>
-                <title key="site:title">#{hashtag} | #TweetMaker</title>
-                <meta property="og:image" content={ogpurl}/>
+                <title>#{hashtag} | #TweetMaker</title>
+                <meta property="og:image" content={String(ogpurl)} />
             </Head>
             <main className={styles.main}>
                 <div className={styles.notify}>
