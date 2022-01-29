@@ -45,6 +45,9 @@ const Page = () => {
                 </div>
                 <p>{hashtag}</p>
             </main>
+            <Head>
+            <meta property="og:image" content={"https://res.cloudinary.com/nixo/image/upload/l_text:Sawarabi%20Gothic_50_bold:%23" + hashtag + ",co_rgb:fff,w_1100,c_fit/v1643418283/tweetmaker-template_viwniv.png"}/>
+            </Head>
         </div>
     )
 }
