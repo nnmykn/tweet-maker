@@ -35,7 +35,7 @@ const Page = () => {
             <Head>
                 <link rel="canonical" href={`https://identicon.go5.run/${hashtag}`}/>
                 <title key="site:title">#{hashtag} | #TweetMaker</title>
-                <meta property="og:image" content={`https://res.cloudinary.com/nixo/image/upload/l_text:Sawarabi%20Gothic_50_bold:%23${hashtag},co_rgb:fff,w_1100,c_fit/v1643418283/tweetmaker-template_viwniv.png`}/>
+                <meta property="og:image" content={"https://res.cloudinary.com/nixo/image/upload/l_text:Sawarabi%20Gothic_50_bold:%23" + hashtag + ",co_rgb:fff,w_1100,c_fit/v1643418283/tweetmaker-template_viwniv.png"}/>
             </Head>
             <main className={styles.main}>
                 <div className={styles.notify}>
