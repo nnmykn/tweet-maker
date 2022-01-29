@@ -30,7 +30,7 @@ const Page = () => {
     }
     const { hashtag } = router.query
     const hash: string = hashtag as string
-    const urlhash = encodeURIComponent(hash)
+    const urlcomp = encodeURI(hash)
     const ogpurl = "https://res.cloudinary.com/nixo/image/upload/l_text:Sawarabi%20Gothic_50_bold:%23" + hash + ",co_rgb:fff,w_1100,c_fit/v1643418283/tweetmaker-template_viwniv.png"
     return (
         <div>
@@ -43,10 +43,10 @@ const Page = () => {
                 <h1>#{hashtag}</h1>
                 <img src={`${ogpurl}`} alt={`#${hashtag}`} />
                 <div></div>
-                <a href={`https://twitter.com/intent/tweet?text=%23TweetMaker%20https%3A%2F%2Ftweet.go5.run%2FTweetMaker`}>ツイートする</a>
+                <a href={`https://twitter.com/intent/tweet?text=%23${hash}%20https%3A%2F%2Ftweet.go5.run%2F`}>ツイートする</a>
             </main>
             <Head>
-                <link rel="canonical" href={`https://identicon.go5.run/${hashtag}`}/>
+                <link rel="canonical" href={`https://tweet.go5.run/${hashtag}`}/>
                 <title key="site:title">#{hashtag} | #TweetMaker</title>
                 <meta property="og:image" content={`${ogpurl}`}/>
             </Head>
