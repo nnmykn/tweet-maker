@@ -17,20 +17,12 @@ const Page = () => {
     return (
         <div>
             <Head>
-                <link rel="canonical" href="https://tweet.go5.run/"/>
-                <title key="site:title">#TweetMaker | 🐤ログイン不要でハッシュタグツイートをできます。</title>
+                <link rel="canonical" href="https://tweet.go5.run/create"/>
+                <title key="site:title">#ツイートを作成 | #TweetMaker</title>
             </Head>
             <main className={styles.main}>
                 <Link href="mailto:hi@kan.run"><a>
                     <button className={styles.button}><span>Contact</span></button>
-                </a></Link>
-                <div></div>
-                <Link href="/en"><a>
-                    <button className={styles.button}><span>EN site</span></button>
-                </a></Link>
-                <div></div>
-                <Link href="/create"><a>
-                    <button className={styles.button}><span>Create</span></button>
                 </a></Link>
                 <div></div>
             </main>
