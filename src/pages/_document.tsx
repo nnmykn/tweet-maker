@@ -26,8 +26,8 @@ class MyDocument extends Document<{stylesheets: Sheet[]}> {
     return (
       <Html>
         <Head>
-        <link rel="alternate" hrefLang="ja" href="https://identicon.go5.run/"/>
-        <link rel="alternate" hrefLang="en" href="https://identicon.go5.run/en/"/>
+        <link rel="alternate" hrefLang="ja" href="https://tweet.go5.run/"/>
+        <link rel="alternate" hrefLang="en" href="https://tweet.go5.run/en/"/>
         <meta name="robots" content="index, follow" />
         <meta name="description" content={description}/>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
