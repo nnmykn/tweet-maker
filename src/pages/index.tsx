@@ -40,7 +40,7 @@ const Page = () => {
                 />
                 <div id="go">
                 <Button onClick={handleClick}>
-                    作成　　
+                    Create
                 </Button>
                 </div>
                 </div>

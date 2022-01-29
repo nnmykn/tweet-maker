@@ -48,7 +48,7 @@ const Page = () => {
                 <h1>#{hashtag}</h1>
                 <img src={`${ogpurl}`} alt={`#${hashtag}`} />
                 <div></div>
-                <a href={`https://twitter.com/intent/tweet?text=%23${hash}%20https%3A%2F%2Ftweet.go5.run%2F`}>ツイートする</a>
+                <a href={`https://twitter.com/intent/tweet?text=%23${hash}%20https%3A%2F%2Ftweet.go5.run%2F${hash}`}>ツイートする</a>
             </main>
         </div>
     )
