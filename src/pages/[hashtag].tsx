@@ -30,12 +30,13 @@ const Page = () => {
     }
     const { hashtag } = router.query
     const hash: string = hashtag as string
+    const urlhash = encodeURIComponent(hash)
     return (
         <div>
             <Head>
                 <link rel="canonical" href={`https://identicon.go5.run/${hashtag}`}/>
                 <title key="site:title">#{hashtag} | #TweetMaker</title>
-                <meta property="og:image" content={"https://res.cloudinary.com/nixo/image/upload/l_text:Sawarabi%20Gothic_50_bold:%23" + hashtag + ",co_rgb:fff,w_1100,c_fit/v1643418283/tweetmaker-template_viwniv.png"}/>
+                <meta property="og:image" content={"https://res.cloudinary.com/nixo/image/upload/l_text:Sawarabi%20Gothic_50_bold:%23" + urlhash + ",co_rgb:fff,w_1100,c_fit/v1643418283/tweetmaker-template_viwniv.png"}/>
             </Head>
             <main className={styles.main}>
                 <div className={styles.notify}>
@@ -43,11 +44,11 @@ const Page = () => {
                     {() => "This is a demo version under development. Basically, it does not work properly."}
                 </Notification>
                 </div>
-                <p>{hashtag}</p>
+                <h1>{hashtag}</h1>
+                <img src={"https://res.cloudinary.com/nixo/image/upload/l_text:Sawarabi%20Gothic_50_bold:%23" + urlhash + ",co_rgb:fff,w_1100,c_fit/v1643418283/tweetmaker-template_viwniv.png"} alt={`#${hashtag}`} />
+                <div></div>
+                <a href={`https://twitter.com/intent/tweet?text=%23TweetMaker%20https%3A%2F%2Ftweet.go5.run%2FTweetMaker`}>ツイートする</a>
             </main>
-            <Head>
-            <meta property="og:image" content={"https://res.cloudinary.com/nixo/image/upload/l_text:Sawarabi%20Gothic_50_bold:%23" + hashtag + ",co_rgb:fff,w_1100,c_fit/v1643418283/tweetmaker-template_viwniv.png"}/>
-            </Head>
         </div>
     )
 }
