@@ -40,13 +40,21 @@ const Page = () => {
                 <meta property="og:image" content={String(ogpurl)} />
             </Head>
             <main className={styles.main}>
-                <div className={styles.notify}>
-                <Notification  kind={KIND.warning}>
-                    {() => "This is a demo version under development. Basically, it does not work properly."}
-                </Notification>
+                <p>「#」は入力しないでください</p>
+                <div className={styles.input_wrap}>
+                <Input
+                    endEnhancer={<Search size="18px" />}
+                    placeholder="#ハッシュタグを入力"
+                    inputRef={inputRef}
+                />
+                <div id="go">
+                <Button onClick={handleClick}>
+                    Create
+                </Button>
+                </div>
                 </div>
                 <h1>#{hashtag}</h1>
-                <img src={`${ogpurl}`} alt={`#${hashtag}`} />
+                <img src={`${ogpurl}`} alt={`#${hashtag}`} width="80%" height="auto" />
                 <div></div>
                 <a href={`https://twitter.com/intent/tweet?text=%23${hash}%20https%3A%2F%2Ftweet.go5.run%2F${hash}`}>ツイートする</a>
             </main>

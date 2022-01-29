@@ -27,9 +27,6 @@ const Page = () => {
                 <meta property="og:image" content={"https://" + "tweet.go5.run" + "/img/ogp.png"}/>
             </Head>
             <main className={styles.main}>
-                <Link href="/create"><a>
-                    <button className={styles.button}><span>Create</span></button>
-                </a></Link>
                 <div></div>
                 <p>「#」は入力しないでください</p>
                 <div className={styles.input_wrap}>
