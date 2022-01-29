@@ -14,25 +14,35 @@ import {Search} from 'baseui/icon'
 import {Button} from 'baseui/button'
 
 const Page = () => {
+    const inputRef = React.useRef<HTMLInputElement>(null)
+    const handleClick = (e) =>  {
+        e = inputRef.current.value
+        window.location.assign(`/${e}`)
+    }
     return (
         <div>
             <Head>
                 <link rel="canonical" href="https://tweet.go5.run/"/>
-                <title key="site:title">#TweetMaker | 🐤ログイン不要でハッシュタグツイートをできます。</title>
+                <title key="site:title">#TweetMaker(ツイートメーカー) | 🐤ログイン不要でハッシュタグツイートをできます。</title>
             </Head>
             <main className={styles.main}>
-                <Link href="mailto:hi@kan.run"><a>
-                    <button className={styles.button}><span>Contact</span></button>
-                </a></Link>
-                <div></div>
-                <Link href="/en"><a>
-                    <button className={styles.button}><span>EN site</span></button>
-                </a></Link>
-                <div></div>
                 <Link href="/create"><a>
                     <button className={styles.button}><span>Create</span></button>
                 </a></Link>
                 <div></div>
+                <p>「#」は入力しないでください</p>
+                <div className={styles.input_wrap}>
+                <Input
+                    endEnhancer={<Search size="18px" />}
+                    placeholder="#ハッシュタグを入力"
+                    inputRef={inputRef}
+                />
+                <div id="go">
+                <Button onClick={handleClick}>
+                    作成　　
+                </Button>
+                </div>
+                </div>
             </main>
         </div>
     )
