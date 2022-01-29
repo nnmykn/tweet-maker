@@ -50,11 +50,6 @@ const Page = () => {
                 <div></div>
                 <a href={`https://twitter.com/intent/tweet?text=%23${hash}%20https%3A%2F%2Ftweet.go5.run%2F`}>ツイートする</a>
             </main>
-            <Head>
-                <meta property="og:image" content={`${ogpurl}`}/>
-                <link rel="canonical" href={`https://tweet.go5.run/${hashtag}`}/>
-                <title key="site:title">#{hashtag} | #TweetMaker</title>
-            </Head>
         </div>
     )
 }
